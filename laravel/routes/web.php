@@ -17,3 +17,6 @@ Route::get('/', function () {
 
 //闭包函数
 Route::any('closure','StudyController@closure')->name('closure');
+
+//在array_amp函数中使用闭包
+Route::any('map','StudyController@map')->name('map');

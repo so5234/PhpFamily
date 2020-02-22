@@ -20,4 +20,26 @@ class StudyController extends Controller
         echo $closure("Josh");
         //输出 --》"Hello，Josh
     }
+
+
+    /**
+     * 在array_map函数中使用闭包
+     */
+    public function map()
+    {
+        $numberPlusOne = array_map( function ($number)
+        {
+            return $number + 1;
+        },[1,2,3]);
+
+        print_r($numberPlusOne);
+        //输出 【2，3，4】
+    }
+
+
+
+
+
+
+
 }
