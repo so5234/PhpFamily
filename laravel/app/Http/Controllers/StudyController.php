@@ -18,7 +18,7 @@ class StudyController extends Controller
         };
 
         echo $closure("Josh");
-        //输出 --》"Hello，Josh
+        //输出 "Hello，Josh
     }
 
 
@@ -35,6 +35,20 @@ class StudyController extends Controller
         print_r($numberPlusOne);
         //输出 【2，3，4】
     }
+
+
+    /**
+     *使用use关键字附加闭包的状态
+     */
+    public function enclosePerson($name)
+    {
+        return function ($doCommand) use ($name)
+        {
+            return printf('%s,%s',$name,$doCommand);
+        };
+    }
+
+
 
 
 
