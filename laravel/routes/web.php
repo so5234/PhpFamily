@@ -15,4 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//闭包函数
 Route::any('closure','StudyController@closure')->name('closure');
