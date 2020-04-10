@@ -17,14 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 //文章列表页面
-Route::get('index','ActController@index')->name('index');
+Route::get('/posts','ActController@index')->name('posts');
 //文章详情页面
-Route::get('index/{post}','ActController@show')->name('show');
+Route::get('/posts/{post}','ActController@show');
 //创建文章
-Route::get('index/create','ActController@create');
-Route::post('index','ActController@store');
+Route::get('/posts/create','ActController@create')->name('create');
+Route::post('/posts','ActController@store');
 //编辑文章
-Route::get('index/{post}/edit','ActController@deit');
-Route::put('index/{post}','ActController@update');
+Route::get('/posts/{post}/edit','ActController@deit');
+Route::put('/posts/{post}','ActController@update');
 //删除文章
-Route::get('index/delete','ActController@delete');
+Route::get('/posts/delete','ActController@delete');

@@ -21,7 +21,7 @@ class ActController extends Controller
     //创建文章
     public function create()
     {
-
+        return view('act/create');
     }
 
     //创建逻辑
